@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#321323" />
+    <meta name="description" content="Guide a little pink robot home through an enchanted rose-colored woodland." />
+    <title>Pink Way Home</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="A pink robot walking through a rose-colored woodland toward a pink cottage"></canvas>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Pink Way home">
+          <span class="brand-mark">P</span>
+          <span>PINK <b>WAY</b></span>
+        </a>
+        <div class="time"><span></span> TWILIGHT TRAIL</div>
+      </header>
+
+      <section class="intro" id="intro">
+        <p class="eyebrow">A SMALL JOURNEY</p>
+        <h1>Find the<br><em>way home.</em></h1>
+        <p class="description">Help Unit P-01 follow the lantern-lit trail through the whispering woods.</p>
+        <button id="start" type="button">BEGIN THE WALK <span>→</span></button>
+      </section>
+
+      <aside class="journey" aria-label="Journey progress">
+        <div class="destination">
+          <span class="house-icon">⌂</span>
+          <div><small>DESTINATION</small><strong>PINK COTTAGE</strong></div>
+        </div>
+        <div class="progress-track"><i id="progress"></i></div>
+        <div class="distance"><span id="distance">84</span> M AWAY</div>
+        <div class="destination secondary">
+          <span class="house-icon rotor-icon">✣</span>
+          <div><small>SECOND DESTINATION</small><strong>PINK HELICOPTER</strong></div>
+        </div>
+        <div class="distance"><span id="helicopter-distance">10</span> M AWAY</div>
+      </aside>
+
+      <div class="controls-panel">
+        <div class="key-grid" aria-hidden="true">
+          <i></i><kbd>↑</kbd><i></i><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd>
+        </div>
+        <div><strong id="control-title">ARROWS · E</strong><span id="control-detail">MOVE · ACTION</span></div>
+      </div>
+      <div class="action-prompt" id="action-prompt"><kbd>E</kbd><span>ACTION</span></div>
+
+      <div class="mobile-controls" aria-label="Movement controls">
+        <button data-key="ArrowLeft" aria-label="Turn left">←</button>
+        <div><button data-key="ArrowUp" aria-label="Walk forward">↑</button><button data-key="ArrowDown" aria-label="Walk backward">↓</button></div>
+        <button data-key="ArrowRight" aria-label="Turn right">→</button>
+        <button class="mobile-action" id="mobile-action" aria-label="Use">E</button>
+      </div>
+
+      <button class="sound" id="sound" type="button" aria-label="Toggle ambient sound visualization">
+        <i></i><i></i><i></i><span>AMBIENCE</span>
+      </button>
+
+      <div class="arrival" id="arrival" role="status">
+        <small>JOURNEY COMPLETE</small>
+        <strong>Welcome home, P-01.</strong>
+      </div>
+      <div class="vignette"></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

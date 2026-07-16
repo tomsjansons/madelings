@@ -1,0 +1,12 @@
+packages:
+  - castle-robot
+  - pink-robot-horses-hay
+  - pink-robot-plane
+  - robot-chess
+  - robot-horse-jump
+  - robot-horses
+  - robot-painting
+  - robot-painting-trees
+  - violet-robot
+allowBuilds:
+  esbuild: true

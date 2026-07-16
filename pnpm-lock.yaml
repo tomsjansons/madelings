@@ -7,6 +7,92 @@ settings:
 importers:
 
   .:
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  castle-robot:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  pink-robot-horses-hay:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  pink-robot-plane:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  robot-chess:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  robot-horse-jump:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  robot-horses:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  robot-painting:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  robot-painting-trees:
+    dependencies:
+      three:
+        specifier: ^0.179.1
+        version: 0.179.1
+    devDependencies:
+      vite:
+        specifier: ^7.0.6
+        version: 7.3.6
+
+  violet-robot:
     dependencies:
       three:
         specifier: ^0.179.1

@@ -15,11 +15,14 @@ const worlds = [
 
 const worldPaths = new Set(worlds.map((world) => `/${world}`));
 
-function serveWorldIndex(request, _response, next) {
+function redirectWorldDirectories(request, response, next) {
   const [pathname, query] = (request.url ?? '').split('?');
 
   if (worldPaths.has(pathname)) {
-    request.url = `${pathname}/index.html${query ? `?${query}` : ''}`;
+    response.statusCode = 308;
+    response.setHeader('Location', `${pathname}/${query ? `?${query}` : ''}`);
+    response.end();
+    return;
   }
 
   next();
@@ -28,10 +31,10 @@ function serveWorldIndex(request, _response, next) {
 const directoryRoutes = {
   name: 'robot-world-directory-routes',
   configureServer(server) {
-    server.middlewares.use(serveWorldIndex);
+    server.middlewares.use(redirectWorldDirectories);
   },
   configurePreviewServer(server) {
-    server.middlewares.use(serveWorldIndex);
+    server.middlewares.use(redirectWorldDirectories);
   },
 };
 

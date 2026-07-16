@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ee6fa7" />
+    <meta name="description" content="A dreamy Three.js animation of a pink robot feeding pink hay to pink pegasi." />
+    <title>Rose Ranch — Pegasus Feeding Hour</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="A pink robot feeding pink hay to three pink pegasi in a dreamy rose-colored paddock"></canvas>
+
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Rose Ranch home">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span>ROSE RANCH <b>/ 04</b></span>
+        </a>
+        <div class="weather"><span class="sun-icon">✦</span><span><b>07:18</b> / PINK HOUR</span></div>
+      </header>
+
+      <section class="hero">
+        <p class="eyebrow"><span></span> MORNING ROUTINE 02</p>
+        <h1>Breakfast<br><em>on the wing.</em></h1>
+        <p class="lede">The blush pegasi circle the ranch, touch down for Rosie’s fresh-cut pink hay, then spread their wings and soar again.</p>
+        <button id="feed" type="button">FEED PINK HAY <span>↗</span></button>
+      </section>
+
+      <aside class="herd-card" aria-label="Pegasus status">
+        <div class="card-heading"><span>PEGASUS STATUS</span><i></i></div>
+        <div class="horse-row"><span class="horse-icon">♞</span><div><b>PEONY</b><small>WINGED MARE · 7 YEARS</small></div><em>HAPPY</em></div>
+        <div class="horse-row"><span class="horse-icon">♞</span><div><b>TAFFY</b><small>PEGASUS · 11 YEARS</small></div><em>HAPPY</em></div>
+        <div class="horse-row"><span class="horse-icon">♞</span><div><b>ROSETTE</b><small>WINGED MARE · 5 YEARS</small></div><em>HAPPY</em></div>
+        <div class="supply"><span>PINK HAY SUPPLY</span><b id="supply">82%</b><div><i id="supply-bar"></i></div></div>
+      </aside>
+
+      <div class="caption"><span id="chapter">01</span><i></i><p><b id="action-title">CIRCLING THE PADDOCK</b><small id="action-copy">Pegasus formation · airborne</small></p></div>
+
+      <div class="hint"><span>DRAG</span> TO LOOK AROUND</div>
+      <button class="sound" id="sound" type="button" aria-label="Pause animation"><i></i><i></i><i></i><i></i><span>PAUSE</span></button>
+      <div class="grain"></div>
+      <div class="vignette"></div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

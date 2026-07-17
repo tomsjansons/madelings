@@ -1,7 +1,8 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
-const sourceRoot = resolve(import.meta.dirname, 'src');
+const projectRoot = process.cwd();
+const sourceRoot = resolve(projectRoot, 'src');
 const worlds = [
   'castle-robot',
   'pink-robot-horses-hay',
@@ -14,10 +15,15 @@ const worlds = [
   'violet-robot',
 ];
 
+const pages = { gallery: resolve(sourceRoot, 'index.html') };
+for (const world of worlds) {
+  pages[world] = resolve(sourceRoot, world, 'index.html');
+}
+
 const worldPaths = new Set(worlds.map((world) => `/${world}`));
 
 function redirectWorldDirectories(request, response, next) {
-  const [pathname, query] = (request.url ?? '').split('?');
+  const [pathname, query] = (request.url || '').split('?');
 
   if (worldPaths.has(pathname)) {
     response.statusCode = 308;
@@ -44,15 +50,10 @@ export default defineConfig({
   plugins: [directoryRoutes],
   appType: 'mpa',
   build: {
-    outDir: resolve(import.meta.dirname, 'dist'),
+    outDir: resolve(projectRoot, 'dist'),
     emptyOutDir: true,
     rollupOptions: {
-      input: {
-        gallery: resolve(sourceRoot, 'index.html'),
-        ...Object.fromEntries(
-          worlds.map((world) => [world, resolve(sourceRoot, world, 'index.html')]),
-        ),
-      },
+      input: pages,
     },
   },
 });

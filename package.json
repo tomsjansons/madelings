@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "pnpm -r --if-present test"
+    "test": "node --test"
+  },
+  "dependencies": {
+    "three": "^0.179.1"
   },
   "devDependencies": {
     "vite": "^7.0.6"

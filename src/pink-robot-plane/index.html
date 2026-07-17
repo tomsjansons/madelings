@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7aac6" />
+    <title>Pink Skies — Robot Pilot</title>
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="scene" aria-label="A pink robot piloting a pink propeller plane through the clouds"></canvas>
+
+      <header class="hud topbar">
+        <a class="brand" href="/" aria-label="Back to Robot Worlds gallery">
+          <span class="brand-mark">PS</span>
+          <span>PINK SKIES</span>
+        </a>
+        <div class="status"><i></i> FLIGHT ONLINE</div>
+      </header>
+
+      <aside class="hud flight-card">
+        <p class="eyebrow">CURRENT MISSION</p>
+        <h1>FLY<br><em>HAPPY.</em></h1>
+        <p class="copy">Unit PNK-01 is taking the scenic route. Drag to steer the flight path.</p>
+        <div class="metrics">
+          <div><span>ALTITUDE</span><strong id="altitude">2,400 <small>FT</small></strong></div>
+          <div><span>AIR SPEED</span><strong id="speed">128 <small>KT</small></strong></div>
+        </div>
+      </aside>
+
+      <div class="hud controls">
+        <button id="sound" type="button" aria-label="Toggle sound visualization"><span class="bars"><i></i><i></i><i></i></span></button>
+        <div class="hint"><span>DRAG</span> TO STEER</div>
+      </div>
+
+      <div class="hud coordinates">34° 12′ 08″ N&nbsp;&nbsp; · &nbsp;&nbsp;118° 14′ 37″ W</div>
+      <div class="vignette"></div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

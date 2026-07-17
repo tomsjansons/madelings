@@ -1,19 +1,19 @@
 # Robot Worlds
 
-A pnpm workspace containing nine interactive Three.js scenes and a shared gallery landing page.
+A single multi-page Vite application containing nine interactive Three.js scenes and a shared gallery landing page.
 
 ## Development
 
 ```sh
-pnpm install
-pnpm dev
+npm install
+npm run dev
 ```
 
-Open `http://localhost:5173/` for the gallery. Each workspace is mounted at its folder name, for example `http://localhost:5173/robot-chess`.
+Open `http://localhost:5173/` for the gallery. Each scene is mounted at its folder name under `src/`, for example `http://localhost:5173/robot-chess/`.
 
 ## Commands
 
-- `pnpm dev` — run the complete multi-page site
-- `pnpm build` — build the gallery and every robot world to `dist/`
-- `pnpm preview` — preview the production build
-- `pnpm test` — run tests in every workspace that defines them
+- `npm run dev` — run the complete multi-page site
+- `npm run build` — build the gallery and every world to `dist/`
+- `npm run preview` — preview the production build
+- `npm test` — run the scene tests

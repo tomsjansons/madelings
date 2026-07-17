@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#12201c" />
+    <meta name="description" content="Guide a yellow robot along the fir-lined road to Emberkeep Castle." />
+    <title>Road to Emberkeep</title>
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="scene" aria-label="A yellow robot on a fir-lined road leading to a dark orange castle and moat"></canvas>
+
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Back to Robot Worlds gallery"><i></i><span>EMBER<span>KEEP</span></span></a>
+        <div class="status"><i></i> GATE APPROACH</div>
+      </header>
+
+      <section class="intro" id="intro">
+        <p class="eyebrow">UNIT R–07 / FINAL APPROACH</p>
+        <h1>The road to<br><em>Emberkeep.</em></h1>
+        <p class="copy">Cross the evergreen valley and reach the old citadel beyond the moat.</p>
+        <button id="start" type="button">BEGIN JOURNEY <span>→</span></button>
+      </section>
+
+      <aside class="mission">
+        <p>DESTINATION</p>
+        <div><span class="crest">♜</span><strong>EMBERKEEP<br><small>THE NORTH GATE</small></strong></div>
+        <div class="track"><i id="progress"></i></div>
+        <p class="distance"><b id="distance">159</b> M REMAINING</p>
+      </aside>
+
+      <aside class="location-panel">
+        <small>CURRENT LOCATION</small>
+        <strong id="location">NORTH APPROACH</strong>
+        <span id="activity-hint">EXPLORE THE CITADEL</span>
+      </aside>
+
+      <div class="controls">
+        <div class="keys"><i></i><kbd>↑</kbd><i></i><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></div>
+        <p><strong>ARROWS · SPACE</strong><span>MOVE · SHOOT AT RANGES</span></p>
+      </div>
+
+      <div class="mobile-controls" aria-label="Movement controls">
+        <button data-key="ArrowLeft" aria-label="Turn left">←</button>
+        <div><button data-key="ArrowUp" aria-label="Walk forward">↑</button><button data-key="ArrowDown" aria-label="Walk backward">↓</button></div>
+        <button data-key="ArrowRight" aria-label="Turn right">→</button>
+        <button class="mobile-shoot" id="mobile-shoot" aria-label="Shoot arrow">➶</button>
+      </div>
+
+      <button class="camera-reset" id="camera-reset" type="button" aria-label="Reset camera view"><span>↺</span> RESET CAMERA</button>
+
+      <div class="arrival" id="arrival" role="status"><small>DESTINATION REACHED</small><strong>Welcome to Emberkeep.</strong></div>
+      <div class="vignette"></div>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

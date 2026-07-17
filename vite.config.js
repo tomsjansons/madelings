@@ -1,6 +1,7 @@
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
+const sourceRoot = resolve(import.meta.dirname, 'src');
 const worlds = [
   'castle-robot',
   'pink-robot-horses-hay',
@@ -39,14 +40,17 @@ const directoryRoutes = {
 };
 
 export default defineConfig({
+  root: sourceRoot,
   plugins: [directoryRoutes],
   appType: 'mpa',
   build: {
+    outDir: resolve(import.meta.dirname, 'dist'),
+    emptyOutDir: true,
     rollupOptions: {
       input: {
-        gallery: resolve(import.meta.dirname, 'index.html'),
+        gallery: resolve(sourceRoot, 'index.html'),
         ...Object.fromEntries(
-          worlds.map((world) => [world, resolve(import.meta.dirname, world, 'index.html')]),
+          worlds.map((world) => [world, resolve(sourceRoot, world, 'index.html')]),
         ),
       },
     },
